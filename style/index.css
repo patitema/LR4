@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 img{
-  width: 100%;
+  max-width: 100%;
 }
 html, body{
   background-color: rgb(54, 54, 54);
@@ -44,10 +44,11 @@ html, body{
   display:  inline-block; 
   color: white;
   text-decoration: none;
-  padding: 25px;
+  padding: 24px;
   font-size: 25px;
-  transition: all .07s ease-in-out;
+  transition: all .1s ease-in-out;
 }
+
 
 .navbar-menu li a:hover {
   color: rgb(247, 207, 159);
@@ -70,7 +71,8 @@ html, body{
   text-decoration: none;
   transition: all .1s ease-out;
 }
-.profile:hover{
+
+.menu:hover{
   transform:scale(1.07);
   color: rgb(247, 207, 159);
 }
@@ -79,6 +81,7 @@ html, body{
   font-weight: 700px;
   font-size: 30px;
   margin-left: 40px;
+  margin-bottom: 10px;
   text-decoration: none;
   color: white;
   transition: all .1s ease-in-out;
@@ -102,12 +105,14 @@ html, body{
   margin-top: 10px;
   background-color: white;
   border: 1px solid black; 
+  border-radius: 20px;
   display: flex;
   padding-left: 20px;
 }
 .search_form_txt{
   border: none;
-  width: 600px;
+  border-radius: 20px;
+  width: 500px;
   height: 30px;
   outline: none;
 }
@@ -121,7 +126,6 @@ html, body{
   z-index: 0;
 }
 
-
 .block{
   background-color: black;
   display: block;
@@ -131,50 +135,137 @@ html, body{
   height: auto;
   max-height: 900px;
 }
+
 main{
+  position: relative;
   background-color: rgb(46, 46, 46);
   display: flex;
   margin-left: auto;
   margin-right: auto;
   width: 95%;
-  height: 100vh;
-  
+  height: auto;
 }
-main .shop{
-  width: inherit;
-  height: inherit;
 
-}
-main .shop .staff{
-  list-style-type: none;
-  margin-left: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.staff li{
-  margin-top: 150px;
-  background-color: rgb(157, 161, 161);
-  width: 350px;
-  height: 350px;
+.staff{
+  background-color: rgb(71, 71, 71);
+  width: 94%;
+  border-radius: 20px;
+  margin-top: 50px;
+  margin-bottom: 50px;
   margin-left: 50px
   
+}
+.staff_menu{
+  width: inherit; 
+  padding-right: 0px;
+  list-style-type: none;
+  margin-left: 40px;
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: center; 
+  align-items: center;
+}
+
+.staff_menu li{
+  color: white;
+  position: relative;
+  min-width: 320px;
+  border: 2px solid black;
+  display: inline-block;
+  border-radius: 20px;
+  margin: 10px;
+  background-color: rgb(157, 161, 161);
+  width: calc(20% - 20px);
+  height: 350px;
+  margin-left: 30px;
+  transition: all .2s ease-in-out;
+}
+.staff_menu li:hover{
+  transform: scale(1.2);
+}
+.staff_menu li a {
+  position: relative;
+  color: white;
+  margin-left: 10px;
+  margin-top: 10px
+  
   
 }
-.staff li img{
+.staff_menu li hr{
+  border: 1.3px solid black;
+}
+.staff_menu li #p1 {
+  color: black;
+  font-size: 25px;
+  margin-top: 30px;
+  margin-left: 230px;
+  text-transform: uppercase;
+  
+
+}
+.staff_menu li #p1:hover {
+  transform: scale(1.4);
+}
+
+  
+.staff_menu li img{
   display: flex;
   margin-left: auto;
   margin-right: auto;
-  width: auto;
-  max-width: 400px;
-  height: auto;
-  max-height: 250px;
+  padding: auto;
+  width: 100%;
+  min-width: 320px;
+  height: 250px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
   background-color: black;
+  
 }
-.staff li a{
+
+.staff_menu li a{
   display: block;
   color: black;
   margin-right: auto;
   text-decoration: none;
+}
 
+footer{
+  min-width: 100vh;
+  height: 300px;
+  background-color: rgb(26, 26, 26);
+}
+
+.foot_wrap{
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.foot_menu{
+  font-size: 20px;
+  color: white;
+  margin-top: 30px;
+  margin-left: 50px;
+  list-style: none;
+
+}
+
+.foot_menu li {
+  margin-top: 10px;
+}
+
+.foot_menu li a{
+  color: white;
+  text-decoration: none;
+  transition: all .07s ease-in-out;
+}
+
+
+.foot_menu li a:hover {
+  color: rgb(247, 207, 159);
+  text-decoration: underline;
+}
+
+#hr1{
+ margin-top: 30px;
 }
