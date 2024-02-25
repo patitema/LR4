@@ -78,6 +78,11 @@ html, body{
   border-radius: 10px;
 }
 
+.menu:active ~ .menu_menu{
+  display: block;
+
+}
+
 .navbar-LOGO{
   font-weight: 700px;
   font-size: 30px;
@@ -87,6 +92,44 @@ html, body{
   color: white;
   transition: all .1s ease-in-out;
 }
+
+.menu_menu{
+  display: none;
+  position: absolute;
+  margin-top: 40px;
+  margin-left: 227px;
+  
+  list-style: none;
+  background-color: rgb(34, 16, 16);
+  transition: all .07s ease-in-out;
+}
+
+.menu_menu:hover{
+  display: block;
+  transform:scale(1.07);
+}
+
+.menu_menu li{
+  position: relative;
+  border: 1px solid white;
+  padding: 20px;
+  padding-right: 30px;
+  padding-left: 30px;
+  margin-top: -1px;
+  text-align: center;
+}
+
+.menu_menu a{
+  text-transform: uppercase;
+  text-decoration: none;
+  color: white;
+}
+
+.menu_menu a:hover{
+  color: rgb(175, 105, 105);
+
+}
+
 .head{
   min-height: 70vh;
   display: flex;
@@ -245,6 +288,7 @@ main{
   
   color: black;
   text-decoration: none;
+  transition: all .07s ease-in-out;
 }
 .pages li a:hover{
   color: rgb(248, 131, 131);
